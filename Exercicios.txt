@@ -1,0 +1,286 @@
+1-
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Aula {
+
+    public static void main(String[] args) {
+        VetorSoma();
+    }
+    public static void VetorSoma(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite os elementos do primeiro vetor: ");;
+        int Tamanho = 5;
+        int[] Vetor1 = new int[Tamanho];
+        for(int i = 0; i < Tamanho; i++){
+            Vetor1[i] = scanner.nextInt();
+        }
+        System.out.println("Digite os elementos do segundo vetor: ");
+        int[] Vetor2 = new int [Tamanho];
+        for(int j = 0; j <Tamanho; j++){
+            Vetor2[j] = scanner.nextInt();
+        }
+        int[] VetorS = new int[Tamanho];
+        for(int k = 0; k < Tamanho; k++){
+            VetorS[k] = Vetor1[k] + Vetor2[k];
+        }
+        String VetorString = Arrays.toString(VetorS);
+        System.out.println("Soma dos vetores: " + VetorString);
+        
+    }
+}
+2-
+import java.util.Scanner;
+
+public class JavaApplication129 {
+   
+    
+    public static void main(String[] args) {
+        MaiorNumero();
+    }
+    public static void MaiorNumero(){
+        Scanner numeros = new Scanner(System.in);
+        int T = 6;
+        int[] vetor = new int[T];
+        int M = Integer.MIN_VALUE;
+        
+        System.out.println("Digite os elementos do vetor");
+        for (int i = 0; i < T; i++) {
+            vetor[i] = numeros.nextInt();
+            if(vetor[i] > M){
+               M = vetor[i];
+            }
+        }
+        System.out.println("o maior elemento é: " + M);
+    }
+    
+}
+3-
+import java.util.Scanner;
+
+public class Aula3 {
+
+    public static void main(String[] args) {
+        Media();
+    }
+    public static void Media(){
+        Scanner numeros = new Scanner(System.in);
+        int T = 8;
+        int[] vetor = new int[T];
+        double total = 0;
+        
+        System.out.println("Digite os elementos do vetor");
+        for (int i = 0; i < T; i++) {
+        vetor[i]= numeros.nextInt();
+        total += vetor[i];
+           
+        }
+        System.out.println("o total é: " + total / T);
+
+    }
+}
+4-
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Aula4 {
+
+    public static void main(String[] args) {
+        VetorCopiar();
+    }
+    public static void VetorCopiar(){
+        Scanner scanner = new Scanner(System.in);
+        int Tamanho = 7;
+        int[] Vetor = new int[Tamanho];
+        System.out.println("Digite os elementos do vetor: ");
+        for(int i = 0; i < Tamanho; i++){
+            Vetor[i] = scanner.nextInt();
+        }
+        int[] VCopiado = Vetor.clone();
+        String CopiaEscrita = Arrays.toString(VCopiado);
+        System.out.println("Elementos copiados");
+        System.out.println(CopiaEscrita);
+}
+}
+5-
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Aula5 {
+
+    public static void main(String[] args) {
+        VIgualdade();
+    }
+    public static void VIgualdade(){
+        Scanner scanner = new Scanner(System.in);
+        int Tamanho = 8;
+        int[] Vetor1 = new int[Tamanho];
+        int[] Vetor2 = new int[Tamanho];
+        
+        System.out.println("Digite os elementos do primeiro vetor: ");
+        for(int i = 0; i < Tamanho; i++){
+            Vetor1[i] = scanner.nextInt();
+        }
+        
+        System.out.println("Digite os elementos do segundo vetor: ");
+        for(int i = 0; i < Tamanho; i++){
+            Vetor2[i] = scanner.nextInt();
+        }
+        boolean Iguais = Arrays.equals(Vetor1, Vetor2);
+        if(Iguais == true){
+            System.out.println("Os elementos são iguais!");
+        }else{
+            System.out.println("Os elementos não são iguais!");
+        }
+    }
+    
+}
+6-
+public static void main(String[] args) {
+        Inverter();
+    }
+    public static void Inverter(){
+        Scanner numeros = new Scanner(System.in);
+        int T = 6;
+        int[] vetor = new int[T];
+        int[] vetorR = new int[T];
+        int i, j;
+        System.out.println("Digite os elementos do vetor: ");
+        for ( i = 0; i < T; i++) {
+            vetor[i] = numeros.nextInt();
+        }
+        for (j = T - 1, i = 0; j >= 0; j--, i++) {
+            vetorR[i] = vetor[j];
+        }
+        String VetorS = Arrays.toString(vetorR);
+        System.out.println("Vetor invertido" + VetorS);
+    }
+    
+}
+7-
+import java.util.Scanner;
+
+public class Aula7 {
+
+    public static void main(String[] args) {
+        ParesImpares();
+    }
+    
+    public static void ParesImpares(){
+        Scanner scanner = new Scanner(System.in);
+        int Tamanho = 6;
+        int Pares = 0;
+        int Impares = 0;
+        int[] Vetor = new int[Tamanho];
+        System.out.println("Digite os elementos do Vetor: ");
+        for(int i = 0; i < Tamanho; i++){
+            Vetor[i] = scanner.nextInt();
+        }
+        
+        for(int i = 0; i < Tamanho; i++){
+            if(Vetor[i] % 2 == 0){
+                Pares++;
+            }else{
+                Impares++;
+            }
+        }
+        System.out.println("Quantidade de pares: " + Pares);
+        System.out.println("Quantidade de ímpares: " + Impares);
+    }
+}
+8-
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Aula8 {
+
+    public static void main(String[] args) {
+        ValorRem();
+    }
+    public static void ValorRem(){
+        Scanner numeros = new Scanner(System.in);
+        int T = 6;
+        int[] vetor = new int[T];
+        
+        System.out.println("Digite os elementos do vetor: ");
+        for (int i = 0; i < T; i++) {
+            vetor[i] = numeros.nextInt();
+        }
+        System.out.println("Digite o valor a ser removido");
+        int R = numeros.nextInt();
+        
+        ArrayList<Integer> vetorN = new ArrayList<>();
+        for(int i = 0; i < T; i++){
+            if(vetor[i] != R){
+                vetorN.add(vetor[i]);
+            }
+        }
+        System.out.println("Vetor depois da remoção"); 
+        for(int n : vetorN){
+            System.out.println(n + "");
+        }
+
+    }
+    
+}
+9-
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Aula9 {
+
+    public static void main(String[] args) {
+        Organizar();
+    }
+    public static void Organizar(){
+        Scanner numeros = new Scanner(System.in);
+        int T = 7;
+        int[] vetor = new int[T];
+        
+        System.out.println("Digite os elementos do vetor: ");
+        for (int i = 0; i < T; i++) {
+            vetor[i] = numeros.nextInt();
+        }
+        Arrays.sort(vetor);
+        System.out.println("Vetor em ordem crescente: " + Arrays.toString(vetor));
+
+    }
+    
+}
+10-
+import java.util.Scanner;
+
+public class Aula10 {
+
+    public static void main(String[] args) {
+        Busca();
+    }
+    public static void Busca() {
+        
+        Scanner numeros = new Scanner(System.in);
+        System.out.print("insira a quantidade de números do vetor: ");
+        int T = numeros.nextInt();
+        int[] vetor = new int[T];
+        
+        System.out.println("Digite os elementos do vetor: ");
+        for (int i = 0; i < T; i++) {
+            vetor[i] = numeros.nextInt();
+        }
+        System.out.println("Insira o elemento que você quer buscar: ");
+        int B = numeros.nextInt();
+        int i = 0;
+        boolean Ee = false;
+        for(i = 0; i < T; i++){
+            if(vetor[i] == B){
+                Ee = true;
+                break;
+            }    
+        }
+        if(Ee == true){
+            System.out.println("O elemento " + B + " foi achado na posição: " + i);
+        }else{
+            System.out.println("O elemento " + B + " não foi encontrado. Elemento na última posição: " + vetor[vetor.length - 1]);
+        }
+    }
+    
+}
